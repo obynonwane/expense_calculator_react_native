@@ -3,10 +3,10 @@ import { useNavigation } from "@react-navigation/native";
 import { GlobalStyles } from "../../constants/styles";
 import { getFormattedDate } from "../../util/date";
 
-function ExpenseItem({ description, date, amount }) {
+function ExpenseItem({ id, description, date, amount }) {
   const navigation = useNavigation();
   function expensePressHandler() {
-    navigation.navigate("ManageExpense"); // navigate programatically from screen not added to the navigation wraper
+    navigation.navigate("ManageExpense", { expenseId: id }); // navigate programatically from screen not added to the navigation wraper
   }
   return (
     <Pressable
