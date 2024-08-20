@@ -30,7 +30,7 @@ function ExpensesOverview() {
             size={24}
             color={tintColor}
             onPress={() => {
-              navigation.navigate("ManageExpense");
+              navigation.navigate("ManageExpense"); // we can also use navigation hook
             }}
           />
         ),
